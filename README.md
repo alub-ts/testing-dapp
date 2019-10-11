@@ -1,5 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+You must install TerminalSDK with
+
+```
+yarn add @terminal-packages/sdk
+```
+
+or
+
+```
+npm install @terminal-packages/sdk
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
