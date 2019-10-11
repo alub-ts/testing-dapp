@@ -35,19 +35,6 @@ function App() {
       </button>
       <button
         onClick={() =>
-          window.web3.eth.getTransaction(
-            "0x177ebae8e77cd190cbd291eefd317ede12c3a0049dba61453b596bac90c17bff",
-            (error, result) => {
-              console.log(error);
-              console.log(result);
-            }
-          )
-        }
-      >
-        Test button getTransaction
-      </button>
-      <button
-        onClick={() =>
           window.ethereum.enable((error, result) => {
             console.log(error);
             console.log(result);
