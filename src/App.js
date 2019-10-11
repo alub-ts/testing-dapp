@@ -54,7 +54,7 @@ function App() {
           })
         }
       >
-        Enable Metamask
+        Enable Metamask (hard refresh page after)
       </button>
       <button
         onClick={() =>
