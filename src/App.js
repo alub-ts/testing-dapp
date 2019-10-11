@@ -20,6 +20,13 @@ function App() {
     });
   };
 
+  const getAddress = async () => {
+    window.web3.eth.getAccounts((error, result) => {
+      console.log(error);
+      console.log(result);
+    });
+  };
+
   const requestSignature = async () => {
     window.web3.eth.getAccounts((error, result) => {
       window.web3.eth.sign(
@@ -30,13 +37,6 @@ function App() {
           console.log(result);
         }
       );
-    });
-  };
-
-  const getAddress = async () => {
-    window.web3.eth.getAccounts((error, result) => {
-      console.log(error);
-      console.log(result);
     });
   };
 
