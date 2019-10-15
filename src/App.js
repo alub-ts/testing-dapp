@@ -1,6 +1,20 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import PocketEth from '@pokt-network/pocket-js';
+import  Web3 from "web3";
+import {TerminalHttpProvider, SourceType} from '@terminal-packages/sdk';
+
+const pocket = new PocketEth()
+const ethereum = walletlink.makeWeb3Provider('https://mainnet.infura.io/v3/d44c7ae787e4470499b9a8118db2f71e',1);
+//const web3 = new Web3(ethereum);
+const web3 = new Web3(
+  new TerminalHttpProvider({
+    apiKey: '21BzLD5JGU+GYjASdpXGKg==',
+    source: 'Walletlink',
+    customHttpProvider: ethereum,
+  })
+)
 
 function App() {
   const getBalanceMM = async () => {
@@ -14,10 +28,9 @@ function App() {
   };
 
   const enableMM = async () => {
-    window.ethereum.enable((error, result) => {
-      console.log(error);
-      console.log(result);
-    });
+    ethereum.enable().then((accounts: string[]) => {
+      console.log(`User's address is ${accounts[0]}`)
+    })
   };
 
   const getAddress = async () => {
