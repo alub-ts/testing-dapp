@@ -18,7 +18,7 @@ const web3 = new Web3(
 
 function App() {
   const getBalanceMM = async () => {
-    window.web3.eth.getBalance(
+    web3.eth.getBalance(
       "0xab7c74abC0C4d48d1bdad5DCB26153FC8780f83E",
       (error, result) => {
         console.log(error);
@@ -34,15 +34,15 @@ function App() {
   };
 
   const getAddress = async () => {
-    window.web3.eth.getAccounts((error, result) => {
+    web3.eth.getAccounts((error, result) => {
       console.log(error);
       console.log(result);
     });
   };
 
   const requestSignature = async () => {
-    window.web3.eth.getAccounts((error, result) => {
-      window.web3.eth.sign(
+    web3.eth.getAccounts((error, result) => {
+      web3.eth.sign(
         result[0],
         ["SOME DATA TO SIGN"],
         (error, result) => {
