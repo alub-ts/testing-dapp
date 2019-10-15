@@ -29,7 +29,7 @@ function App() {
   };
 
   const enableMM = async () => {
-   window.ethereum.enable().then((accounts: string[]) => {
+      ethereum.enable().then((accounts: string[]) => {
       console.log(`User's address is ${accounts[0]}`)
     })
   };
