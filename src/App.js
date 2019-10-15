@@ -35,7 +35,7 @@ function App() {
   };
 
   const getAddress = async () => {
-    web3.eth.getAccounts((error, result) => {
+    window.web3.eth.getAccounts((error, result) => {
       console.log(error);
       console.log(result);
     });
