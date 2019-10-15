@@ -60,7 +60,7 @@ function App() {
       <button onClick={() => enableMM()}>
         Enable (hard refresh page after)
       </button>
-      <button onClick={() => getAddress()}>Get Current Address</button>
+      <button onClick={() => getAddress()}>test coinbase</button>
       <button onClick={() => requestSignature()}>request signature</button>
     </div>
   );
