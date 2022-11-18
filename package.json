@@ -6,7 +6,7 @@
     "@terminal-packages/sdk": "^1.0.18",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "react-scripts": "3.2.0",
+    "react-scripts": "5.0.1",
     "walletlink": "^1.0.0",
     "web3": "^1.2.1"
   },
